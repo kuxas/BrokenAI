@@ -1,1 +1,2 @@
 # BrokenAI
+update readme
