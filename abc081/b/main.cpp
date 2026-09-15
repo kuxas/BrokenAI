@@ -19,7 +19,9 @@ int main() {
   int ans = 0;
 
   while (true) {
+    // すべて偶数と仮定
     bool ok = true;
+    // もし配列の中に一つでも奇数が存在するならループを抜ける
     rep(i, n) {
         if (a[i] % 2 == 1) {
             ok = false;
@@ -27,6 +29,12 @@ int main() {
         }
     }
     if (!ok) break;
+    /*全要素を2で割る処理をしたかったができなかった。本来するべき処理は下記
+      rep(i, n) {
+      a[i] /= 2;
+      ans++;
+    }
+    */
     rep(i, n) {
         a[i] /= 2;
         ans++;
