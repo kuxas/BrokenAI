@@ -7,14 +7,14 @@ using ll = long long;
 using P = pair<int,int>;
 
 /*失敗作
-vector<int> jud(int n, int y) {
+vector<int> jud(int n, int y) {                     引数yを再宣言してしまっている  
   int x, y, z;
 
   for (x = 0; x <= n ; x++) {
     for (y = 0; y <= n - x ; y++) {
       z = n - x - y;
       if (10000 * x + 5000 * y + 1000 * z == y) {
-        return {x, y, z};
+        return {x, y, z};                           最初int型で宣言していたため返り値がvector型で返せずエラーになった
       }
     }
   }
