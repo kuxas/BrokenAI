@@ -1,0 +1,43 @@
+/*
+各位の和の算出方法をもう少し工夫できそう。
+15行目で0-indexを使ったが素直に1-indexで記述したほうが見やすかった？
+※copilotより1-indexの記述方法
+for (int x = 1; x <= n; x++) {
+    string s = to_string(x);
+    int sum = 0;
+    for (char c : s) sum += c - '0';
+    if (sum >= a && sum <= b) ans += x;
+}
+for (char c : s) sum += c - '0';
+文字列sの仲の文字を左から順番にcに代入して処理を行っている。
+cはchar型なので、文字コードの数値を取得するために'0'を引いている。
+そのままcを出力してもよいかと考えたが,char型のため、文字コードの数値が出力されてしまう。
+
+※copilotより、さらに見やすいコードを書いてもらった。
+int digit_sum(int x) {
+    int s = 0;
+    while (x > 0) {
+        s += x % 10;
+        x /= 10;
+    }
+    return s;
+}
+
+int main() {
+    int n, a, b;
+    cin >> n >> a >> b;
+
+    int ans = 0;
+    for (int x = 1; x <= n; x++) {
+        int s = digit_sum(x);
+        if (a <= s && s <= b) ans += x;
+    }
+
+    cout << ans << '\n';
+}
+各位の和の算出を関数化することで、main関数の中がすっきりして見やすくなった。
+関数化のメリットを理解できていなかったから、今後は有効活用していきたい。
+
+
+*/
+
