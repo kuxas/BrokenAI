@@ -17,3 +17,8 @@ AtCoder Beginners Selection
 https://atcoder.jp/contests/abs/tasks
 
 本日より2章を進めていく.
+
+26/09/18
+2.05.再起関数にて敗北.
+なんとなくの処理はわかるが,いざ問題を解こうとすると手が全く動かない...
+もう少し他の問題を解いてからリベンジ.
