@@ -6,7 +6,7 @@ using namespace atcoder;
 using ll = long long;
 using P = pair<int,int>;
 
-bool judge (vector<int> &a, vector<int> &f, ll mid, int k) {
+bool judge (const vector<int> &a,const vector<int> &f, ll mid, int k) {
   int n = a.size();
   ll need_sum = 0;
 
