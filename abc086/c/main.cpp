@@ -9,41 +9,29 @@ using P = pair<int,int>;
 int main() {
     int n;
     cin >> n;
-    vector<vector<int>> a(n, vector<int>(3));
-
+    vector<vector<int>> l(n, vector<int>(3));
     rep(i, n) {
-        rep(j, 3) cin >> a[i][j];
-
-        int t = a[i][0];
-        int x = a[i][1];
-        int y = a[i][2];
-
-        if (i == 0) {
-            int dist = abs(x) + abs(y);
-            if (dist > t) {
-                cout << "No\n";
-                return 0;
-            }
-            if ((t - dist) % 2 != 0) {
-                cout << "No\n";
-                return 0;
-            }
+        rep(j, 3) {
+            cin >> l[i][j];
         }
-        else {
-            int dt = t - a[i-1][0];
-            int dist = abs(x - a[i-1][1]) + abs(y - a[i-1][2]);
-
-            if (dist > dt) {
-                cout << "No\n";
-                return 0;
-            }
-            if ((dt - dist) % 2 != 0) {
-                cout << "No\n";
-                return 0;
-            }
+    }
+    if (n == 1) {
+        if (l[0][0] < l[0][1] + l[0][2] || (l[0][0] - (l[0][1] + l[0][2])) % 2 == 1) {
+            cout << "No\n";
+            return 0;
         }
     }
 
+    for(int i = 1; i < n; i++) {
+        int t, x, y;
+        t = l[i][0] - l[i - 1][0];
+        x = abs(l[i][1] - l[i - 1][1]);
+        y = abs(l[i][2] - l[i - 1][2]);
+        if (t < x + y || (t - (x + y)) % 2 == 1) {
+            cout << "No\n";
+            return 0;
+        }
+    }
     cout << "Yes\n";
     return 0;
 }

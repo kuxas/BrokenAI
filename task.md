@@ -1,5 +1,10 @@
 # task 
 
+解きなおしたい問題
+sumitrust2019_c
+abc074_c
+abc088_c
+
 26/09/25更新
 https://kenkoooo.com/atcoder/#/training/Boot%20camp%20for%20Beginners
 とりあえず自分のレベルにあった問題をたくさん出してくれるので一旦これを埋め始めた.
