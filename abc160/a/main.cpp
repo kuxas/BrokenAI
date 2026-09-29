@@ -7,10 +7,9 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-  int k;
-  cin >> k;
-  vector<int> i = {1, 1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 5, 1, 2, 1, 14, 1, 5, 1, 5, 2, 2, 1, 15, 2, 2, 5, 4, 1, 4, 1, 51};
-  
-  cout << i[k - 1] << '\n';
+  string s;
+  cin >> s;
+
+  cout << (s[3 - 1] == s[4 - 1] && s[5 - 1] == s[6 - 1] ? "Yes" : "No") << '\n';
   return 0;
-}`
+}

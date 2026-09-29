@@ -4,6 +4,7 @@
 sumitrust2019_c
 abc074_c
 abc088_c
+abc161_d
 
 26/09/25更新
 https://kenkoooo.com/atcoder/#/training/Boot%20camp%20for%20Beginners

@@ -7,10 +7,10 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-  int k;
-  cin >> k;
-  vector<int> i = {1, 1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 5, 1, 2, 1, 14, 1, 5, 1, 5, 2, 2, 1, 15, 2, 2, 5, 4, 1, 4, 1, 51};
-  
-  cout << i[k - 1] << '\n';
+  ll n, k;
+  cin >> n >> k;
+
+  ll r = n % k;
+  cout << (r < k - r ? r : k - r) << '\n';  
   return 0;
-}`
+}

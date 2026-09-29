@@ -7,10 +7,19 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-  int k;
-  cin >> k;
-  vector<int> i = {1, 1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 5, 1, 2, 1, 14, 1, 5, 1, 5, 2, 2, 1, 15, 2, 2, 5, 4, 1, 4, 1, 51};
-  
-  cout << i[k - 1] << '\n';
+  ll x;
+  cin >> x;
+
+  int cnt_500 = 0;
+  int cnt_5 = 0;
+  if (x >= 500) {
+    cnt_500 = x / 500;
+    x %= 500;
+    cnt_5 = x / 5;
+  }
+  else {
+    cnt_5 = x / 5;
+  }
+  cout << cnt_500 * 1000 + cnt_5 * 5 << '\n';
   return 0;
-}`
+}
